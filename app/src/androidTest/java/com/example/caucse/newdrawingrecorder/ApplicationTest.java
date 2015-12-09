@@ -1,4 +1,4 @@
-package com.example.caucse.drawingrecoder;
+package com.example.caucse.newdrawingrecorder;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

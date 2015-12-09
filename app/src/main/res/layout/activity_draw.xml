@@ -1,21 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context=".DrawActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
-    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/strokeWidthPlusButton"
+            android:text="크기+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
-    </android.support.design.widget.AppBarLayout>
+        <Button
+            android:id="@+id/strokeWidthMinusButton"
+            android:text="크기-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
-    <include layout="@layout/content_draw" />
+        <Button
+            android:id="@+id/changeColorButton"
+            android:text="색변경"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
-    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        <Button
+            android:id="@+id/undoButton"
+            android:text="지우기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
-</android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/loadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 불러오기 "/>
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textOff="녹화시작"
+            android:textOn="녹화 중"
+            android:id="@+id/startButton" />
+    </LinearLayout>
+
+    <me.panavtec.drawableview.DrawableView
+        android:id="@+id/paintView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hi"/>
+
+</LinearLayout>
